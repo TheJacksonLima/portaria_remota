@@ -1,0 +1,98 @@
+############################
+# ===== OS / Editor =====
+############################
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.iml
+
+############################
+# ===== Java / Maven =====
+############################
+target/
+*.class
+*.log
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ
+out/
+
+############################
+# ===== Spring Boot =====
+############################
+*.pid
+*.hprof
+hs_err_pid*
+
+############################
+# ===== Python =====
+############################
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+############################
+# ===== Python Tools =====
+############################
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+############################
+# ===== OpenCV / Media =====
+############################
+*.avi
+*.mp4
+*.mov
+*.jpg
+*.png
+*.jpeg
+
+############################
+# ===== Environment =====
+############################
+.env
+.env.*
+!.env.example
+
+############################
+# ===== Docker =====
+############################
+*.log
+docker-compose.override.yml
+
+############################
+# ===== Node (se surgir) =====
+############################
+node_modules/
+
+############################
+# ===== Temp / Cache =====
+############################
+tmp/
+temp/
+.cache/
+
+############################
+# ===== Logs =====
+############################
+logs/
+*.log

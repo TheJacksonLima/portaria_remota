@@ -1,0 +1,7 @@
+server:
+  port: 9191
+spring:
+  application:
+    name: FaceRecognition
+face:
+  aes-key: ${FACE_AES_KEY}
