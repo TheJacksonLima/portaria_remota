@@ -6,7 +6,6 @@ from config import load_config
 _config = load_config()
 AES_KEY = _config["AES_KEY"]
 
-assert len(AES_KEY) == 32
 
 def encrypt_bytes(data: bytes) -> bytes:
     aesgcm = AESGCM(AES_KEY)

@@ -5,3 +5,5 @@ spring:
     name: FaceRecognition
 face:
   aes-key: ${FACE_AES_KEY}
+firebase:
+  credentials: ${FIREBASE_CREDENTIALS}

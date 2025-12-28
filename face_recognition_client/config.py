@@ -1,10 +1,8 @@
-# config.py
 import os
 import base64
 from dotenv import load_dotenv
 
 def load_config():
-    # Carrega .env se existir (não sobrescreve variáveis do sistema)
     load_dotenv()
 
     host = os.getenv("HOST_FACE_EVALUATOR")

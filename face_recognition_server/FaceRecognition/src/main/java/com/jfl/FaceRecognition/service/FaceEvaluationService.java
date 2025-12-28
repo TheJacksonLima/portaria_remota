@@ -1,19 +1,33 @@
 package com.jfl.FaceRecognition.service;
 
+import com.google.cloud.storage.Acl;
+import com.google.cloud.storage.Blob;
+import com.google.cloud.storage.Bucket;
+import com.google.firebase.cloud.StorageClient;
 import org.springframework.stereotype.Service;
 
 @Service
 public class FaceEvaluationService {
 
-    public boolean evaluate(byte[] imageBytes) {
-        // MOCK:
-        // Aqui entra:
-        // - ML model
-        // - OpenCV
-        // - chamada externa
-        // - comparação biométrica
+    public String uploadImage(byte[] imageBytes, String name) {
 
-        // Simula aprovação
+        Bucket bucket = StorageClient.getInstance().bucket();
+
+        Blob blob = bucket.create(
+                "faces/" + name + ".jpg",
+                imageBytes,
+                "image/jpeg"
+        );
+
+        blob.createAcl(Acl.of(Acl.User.ofAllUsers(), Acl.Role.READER));
+
+        return String.format(
+                "https://storage.googleapis.com/%s/%s",
+                bucket.getName(),
+                blob.getName()
+        );
+    }
+    public boolean evaluate(byte[] imageBytes) {
         return imageBytes.length > 10_000;
     }
 }

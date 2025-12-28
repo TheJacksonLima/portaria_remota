@@ -14,7 +14,9 @@ def send_face_image(image_bytes: bytes) -> bool:
 
         resp = requests.post(
             HOST_FACE_EVALUATOR,
-            json={"image": payload},
+            json={ 
+                "deviceId": "boruto",
+                "image": payload},
             timeout=5
         )
         print(f"Answer: {resp}")
