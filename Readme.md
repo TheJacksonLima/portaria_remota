@@ -10,9 +10,9 @@ O objetivo do projeto é capturar imagens faciais no cliente, enviá-las de form
 
 ```mermaid
 flowchart LR;
-    c[client (raspberry-pi)]
-    s[server]
-    f[firebase]
+    c["client (raspberry-pi)"]
+    s["server"]
+    f["firebase"]
 
     c --> s --> f
 ```
